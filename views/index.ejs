@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UBIleste</title>
+
+  <!-- Estilo CSS embutido -->
+  <style>
+    /* Definições básicas */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    /* Estilo do formulário */
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    label {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: #555;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+
+    input[type="submit"],
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    input[type="submit"]:hover,
+    button:hover {
+      background-color: #45a049;
+    }
+
+    /* Estilo para telas pequenas */
+    @media (max-width: 600px) {
+      form {
+        width: 90%;
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* Estilo do formulário em telas grandes */
+    @media (min-width: 600px) {
+      form {
+        width: 60%;
+        padding: 30px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div>
+    <h1>Estudante Novo</h1>
+    <form action="/registrar" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" placeholder="Nome completo" required />
+
+      <label for="curso">Curso:</label>
+      <input type="text" name="curso" placeholder="Curso frequentado" required />
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" name="tel" id="tel" placeholder="Número de telefone" required />
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="Email" required />
+
+      <button type="submit">Registrar</button>
+    </form>
+  </div>
+</body>
+
+</html>
